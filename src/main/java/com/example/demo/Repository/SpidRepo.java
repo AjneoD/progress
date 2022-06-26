@@ -7,8 +7,10 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface SpidRepo extends JpaRepository<Spid, Long> {
-    List<Spid> findSpidByUserId(User user);
+    Optional<Spid> findSpidByUserId(User users);
+
 }
